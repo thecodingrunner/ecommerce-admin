@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Nav() {
-<<<<<<< HEAD
+
   const inactiveLink = "flex gap-1 p-1 border-2";
   const activeLink = inactiveLink + " bg-white text-blue-900 rounded-l-lg border-black";
   const router = useRouter();
@@ -11,12 +11,6 @@ export default function Nav() {
     await router.push("/");
     await signOut();
   }
-=======
-    const inactiveLink = 'flex gap-1 p-1'
-    const activeLink = inactiveLink + ' bg-white text-blue-900 rounded-l-lg'
-    const router = useRouter()
-    const {pathname} = router
->>>>>>> parent of 83dbca8 (Restrict authorised gmail accounts)
   return (
     <aside className="text-black p-4 pr-0">
       <Link href={"/"} className="flex gap-1 mb-4 mr-4">
@@ -108,7 +102,6 @@ export default function Nav() {
           </svg>
           Settings
         </Link>
-<<<<<<< HEAD
         <button onClick={logout} className={inactiveLink}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -126,8 +119,6 @@ export default function Nav() {
           </svg>
           Logout
         </button>
-=======
->>>>>>> parent of 83dbca8 (Restrict authorised gmail accounts)
       </nav>
     </aside>
   );

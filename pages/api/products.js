@@ -4,11 +4,6 @@ import { Product } from "@/models/Product";
 export default async function handle(req, res) {
     const {method} = req;
     await mongooseConnect()
-<<<<<<< HEAD
-    // await isAdminRequest(req,res)
-
-=======
->>>>>>> parent of 83dbca8 (Restrict authorised gmail accounts)
     if (method === 'POST') {
         const {title,description,price,images} = req.body
         const productDoc = await Product.create({
