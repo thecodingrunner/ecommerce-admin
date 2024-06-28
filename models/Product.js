@@ -11,6 +11,8 @@ const ProductSchema = new Schema({
         required: true,
     },
     images: [{type: String}],
+}, {
+    timestamps: true,
 })
 
 export const Product = models.Product || model('Product', ProductSchema)

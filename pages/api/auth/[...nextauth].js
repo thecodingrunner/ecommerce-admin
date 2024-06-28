@@ -1,10 +1,13 @@
-import NextAuth, { getServerSession } from "next-auth"
+import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@auth/mongodb-adapter"
 import clientPromise from "../../../lib/db"
+<<<<<<< HEAD
 
 // const adminEmails = ['finn.moffett@googlemail.com']
 
+=======
+>>>>>>> parent of 83dbca8 (Restrict authorised gmail accounts)
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
@@ -14,6 +17,7 @@ export const authOptions = {
     })
   ],
   adapter: MongoDBAdapter(clientPromise),
+<<<<<<< HEAD
   // callbacks: {
   //   session: ({session,token,user}) => {
   //     if (adminEmails.includes(session?.user?.email)) {
@@ -34,3 +38,7 @@ export default NextAuth(authOptions)
 //     throw 'not an admin'
 //   }
 // }
+=======
+}
+export default NextAuth(authOptions)
+>>>>>>> parent of 83dbca8 (Restrict authorised gmail accounts)

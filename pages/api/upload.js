@@ -2,14 +2,15 @@ import multiparty from 'multiparty'
 import {PutObjectCommand, S3Client} from '@aws-sdk/client-s3'
 import fs from 'fs';
 import mime from 'mime-types';
-import { mongooseConnect } from '@/lib/mongoose';
-import { isAdminRequest } from './auth/[...nextauth]';
 const bucketName = 'finn-next-ecommerce';
 
 export default async function handle(req,res) {
+<<<<<<< HEAD
     await mongooseConnect()
     // await isAdminRequest(req,res)
 
+=======
+>>>>>>> parent of 83dbca8 (Restrict authorised gmail accounts)
     const form = new multiparty.Form()
     const {fields,files} = await new Promise((resolve,reject) => {
         form.parse(req, (err, fields, files) => {
